@@ -25,10 +25,10 @@ namespace Diplomna.DbContexts
                 }
                 );
             modelBuilder.Entity<Roles>().HasData(
-               new Roles("admin") {
+               new Roles("admin","10") {
                    Id = 1,
              
-                   Usersid ="10"
+               
 
                }) ;
 

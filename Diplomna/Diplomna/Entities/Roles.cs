@@ -15,10 +15,11 @@ namespace Diplomna.Entities
         [ForeignKey("Usersid")]
         public string Usersid { get; set; }
 
-        public Roles ( string Role)
+        public Roles ( string Role,string Usersid)
         {
 
             this.Role = Role;
+            this.Usersid = Usersid;
         }
     }
 }
