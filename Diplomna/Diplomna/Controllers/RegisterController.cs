@@ -1,6 +1,7 @@
 ﻿using Diplomna.DbContexts;
 using Diplomna.Dto;
 using Diplomna.Entities;
+using Diplomna.Services;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,12 +15,13 @@ namespace Diplomna.Controllers
     {
  
         private UsersInfoContext _usersInfoContext;
+        private IdentityInterface _identityService;
 
-        public RegisterController( UsersInfoContext usersInfoContext)
+        public RegisterController( UsersInfoContext usersInfoContext,IdentityInterface identityService)
         {
 
             _usersInfoContext = usersInfoContext;
-            
+            _identityService = identityService;
         }
         private String HashPassword(String password) {
             byte[] salt = RandomNumberGenerator.GetBytes(128 / 8); 
@@ -42,9 +44,9 @@ namespace Diplomna.Controllers
             
             Users users = new Users(registerDto.name)
             {
-                id = registerDto.id,
+               
                 email = registerDto.email,
-                password = HashPassword( registerDto.password)
+                password = _identityService.HashPassword( registerDto.password)
 
 
             };

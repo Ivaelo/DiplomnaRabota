@@ -18,9 +18,7 @@ namespace Diplomna.Entities
 
 
         public ICollection<Courses> Corses { get; set; }
-            = new List<Courses>();
         public ICollection<Roles> Roles { get; set; }
-          = new List<Roles>();
 
         public Users(String name) {
 

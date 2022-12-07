@@ -72,3 +72,5 @@ C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\De
 C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.pdb
 C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.genruntimeconfig.cache
 C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\ref\Diplomna.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\RestSharp.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\System.Security.Permissions.dll
