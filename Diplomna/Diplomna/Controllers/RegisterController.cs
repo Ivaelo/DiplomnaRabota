@@ -13,51 +13,35 @@ namespace Diplomna.Controllers
     [ApiController]
     public class RegisterController : ControllerBase
     {
- 
+
         private UsersInfoContext _usersInfoContext;
         private IdentityInterface _identityService;
 
-        public RegisterController( UsersInfoContext usersInfoContext,IdentityInterface identityService)
+        public RegisterController(UsersInfoContext usersInfoContext, IdentityInterface identityService)
         {
 
             _usersInfoContext = usersInfoContext;
             _identityService = identityService;
         }
-        private String HashPassword(String password) {
-            byte[] salt = RandomNumberGenerator.GetBytes(128 / 8); 
-            Console.WriteLine($"Salt: {Convert.ToBase64String(salt)}");
-
-            
-            string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
-                password: password!,
-                salt: salt,
-                prf: KeyDerivationPrf.HMACSHA256,
-                iterationCount: 100000,
-                numBytesRequested: 256 / 8));
-
-            return hashed;
-        }
 
         [HttpPost]
-        public async  Task<ActionResult<UsersInfoContext>> Register(RegisterDto registerDto) {
-            //_register.RegisterUser(registerDto);
-            
-            Users users = new Users(registerDto.name)
-            {
-               
-                email = registerDto.email,
-                password = _identityService.HashPassword( registerDto.password)
+        public async Task<ActionResult<UsersInfoContext>> Register(RegisterDto registerDto) {
 
-
-            };
-             Roles roles = new Roles("AverageUser", registerDto.id);
-            _usersInfoContext.roles.Add(roles);
-            _usersInfoContext.users.Add(users);
+            await _identityService.RegisterUser(registerDto);
+            _identityService.SetRole("AverageUser", registerDto.id);
             await _usersInfoContext.SaveChangesAsync();
-            
             return Ok();
-        } 
-
+        }
+        [HttpPost("/superUser")]
+        public async Task<IActionResult> RegisterSuperUser(RegisterDto registerDto) {
+            await _identityService.RegisterUser(registerDto);
+            return Ok("Your account is weating for aproval");
+        }
+        [HttpPost("/aproveSuperUser")]
+        public async Task<IActionResult> AproveSuperUser(String id,bool isAproved) {
+           var mesage =  await _identityService.AproveSuperUser(id,isAproved);
+            return Ok(mesage);
+        }
     }
 }
  

@@ -22,6 +22,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 }
     );
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 /*builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme ).AddCookie(o => 
 {
     o.Cookie.Name = "__Host-spa";

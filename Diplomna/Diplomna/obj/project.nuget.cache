@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3kMHhgj2Vd6UNPXrqRwSqBj21uRa2XKXShw9jkPcdLYwq4squEdRBDJC9bN3OHUEjStz2u7K8v9EYgSv93/Zxg==",
+  "dgSpecHash": "1k0Jp4L4XcWVR9IW1fOP9y677oQjuxIu4Gca5knJjnGn7AVXrtgPZtUnoisS3j6reFP/19k5Fl+8RWuRfnfFmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ivaelo Krastev\\Documents\\GitHub\\DiplomnaRabota\\Diplomna\\Diplomna\\Diplomna.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ivaelo Krastev\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Ivaelo Krastev\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\Ivaelo Krastev\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Ivaelo Krastev\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ivaelo Krastev\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\Ivaelo Krastev\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",

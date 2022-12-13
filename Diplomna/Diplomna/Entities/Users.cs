@@ -11,6 +11,7 @@ namespace Diplomna.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public String id { get; set; }
         [Required]
+       
         public String name { get; set; }
         public String email { get; set; }
         public String password { get; set; }
