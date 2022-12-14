@@ -10,14 +10,13 @@ namespace Diplomna.Entities
         public String Courseid { get; set; }
 
         [ForeignKey("Creator")]
-        public String Creator { get; set; }
+
         [Required]
         public String CoursName { get; set; }
         [Required]
         [MaxLength(200)]
         public String Description { get; set; }
-        public ICollection<Videos> Videos { get; set; } 
-            = new List<Videos>();
+        public ICollection<Units> Units { get; set; }
         public Courses(string CoursName) { 
             this.CoursName = CoursName;
         }

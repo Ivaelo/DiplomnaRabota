@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.InteropServices;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Diplomna.Entities
@@ -8,12 +9,10 @@ namespace Diplomna.Entities
     {
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public String id { get; set; }
-        [Required]
-       
         public String name { get; set; }
+        [Required]
         public String email { get; set; }
+        [Required]
         public String password { get; set; }
         
 

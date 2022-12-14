@@ -20,8 +20,8 @@ namespace Diplomna.Services
         }
 
 
-        public async Task<bool> SetRole(String Role,String userId ) {
-            Roles roles = new Roles(Role, userId);
+        public async Task<bool> SetRole(String Role,String userName ) {
+            Roles roles = new Roles(Role, userName);
             _usersInfoContext.roles.Add(roles);
            // await _usersInfoContext.SaveChangesAsync();
             return true;
@@ -33,10 +33,10 @@ namespace Diplomna.Services
             var a = _usersInfoContext.users.Where(p => (p.name.Equals(logInDto.name))).FirstOrDefault();
             if (BCrypt.Net.BCrypt.Verify(logInDto.password, a.password) == true)
             {
-                var role = _usersInfoContext.roles.Where(p => p.Usersid.Equals(a.id)).FirstOrDefault();
+                var role = _usersInfoContext.roles.Where(p => p.UsersName.Equals(a.name)).FirstOrDefault();
                 if (string.IsNullOrWhiteSpace(context.Session.GetString(SessionVariables.sessionUserId)))
                 {
-                    context.Session.SetString(SessionVariables.sessionUserId, a.id);
+                    context.Session.SetString(SessionVariables.sessionUserId, a.name);
                     context.Session.SetString(SessionVariables.sessionUserRole, role.Role);
                 }
                
@@ -53,7 +53,7 @@ namespace Diplomna.Services
             String pass = BCrypt.Net.BCrypt.HashPassword(registerDto.password);
             Users users = new Users(registerDto.name)
             {
-                id = registerDto.id,
+               
                 email = registerDto.email,
                 password = pass
 
@@ -65,11 +65,11 @@ namespace Diplomna.Services
             return true;
         }
 
-        public async Task<String> AproveSuperUser(string id, bool isAproved)
+        public async Task<String> AproveSuperUser(string name, bool isAproved)
         {
             if (isAproved == true)
             {
-                SetRole("SuperUser", id);
+                SetRole("SuperUser", name);
                 await _usersInfoContext.SaveChangesAsync();
                 
                 return "aproved";

@@ -28,7 +28,7 @@ namespace Diplomna.Controllers
         public async Task<ActionResult<UsersInfoContext>> Register(RegisterDto registerDto) {
 
             await _identityService.RegisterUser(registerDto);
-            _identityService.SetRole("AverageUser", registerDto.id);
+            _identityService.SetRole("AverageUser", registerDto.name);
             await _usersInfoContext.SaveChangesAsync();
             return Ok();
         }

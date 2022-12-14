@@ -12,14 +12,14 @@ namespace Diplomna.Entities
         public int Id { get; set; }
         [Required]
         public String Role { get; set; }
-        [ForeignKey("Usersid")]
-        public string Usersid { get; set; }
+        [ForeignKey("UsersName")]
+        public string UsersName { get; set; }
 
-        public Roles ( string Role,string Usersid)
+        public Roles ( string Role,string UsersName)
         {
 
             this.Role = Role;
-            this.Usersid = Usersid;
+            this.UsersName = UsersName;
         }
     }
 }

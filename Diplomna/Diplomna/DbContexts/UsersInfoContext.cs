@@ -9,6 +9,7 @@ namespace Diplomna.DbContexts
         public DbSet<Courses> courses { get; set; } = null!;
         public DbSet<Videos> videos { get; set; } = null!;
         public DbSet<Roles> roles { get; set; } = null!;
+        public DbSet<Units> units { get; set; } = null!;
 
         public UsersInfoContext(DbContextOptions<UsersInfoContext> option) : base(option)
         { }
@@ -16,20 +17,16 @@ namespace Diplomna.DbContexts
             modelBuilder.Entity<Users>().HasData(
                 new Users("Admin")
                 {
-                    id = "10",
                     email = "admin@gmail.com",
-                    password = "1234",
+                    password = BCrypt.Net.BCrypt.HashPassword("1234"),
                     
                     //roles.Add("admin")
                     //zashto ne moga da dam value na roles
                 }
                 );
             modelBuilder.Entity<Roles>().HasData(
-               new Roles("admin","10") {
-                   Id = 1,
-             
-               
-
+               new Roles("admin","Admin") {
+                    Id = 1,
                }) ;
 
            base.OnModelCreating(modelBuilder);

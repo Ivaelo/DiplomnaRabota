@@ -8,11 +8,10 @@ namespace Diplomna.Entities
         public int Id { get; set; }
 
         public String Title { get; set; }
-
-        public Courses courseName { get; set; }
         public int VideosCount { get; set; }
         public String VideoPath { get; set; }
 
+        public int Unitid { get; set; }
         public Videos( string title, int videosCount, string videoPath)
         {
            
