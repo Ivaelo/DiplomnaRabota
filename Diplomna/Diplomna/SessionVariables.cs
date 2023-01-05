@@ -2,7 +2,7 @@
 {
     public class SessionVariables
     {
-        public const string sessionUserId = "1";
+        public const string sessionUserName = "1";
         public const string sessionUserRole = "0";
     }
 }

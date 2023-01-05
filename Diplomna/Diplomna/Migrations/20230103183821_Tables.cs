@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Diplomna.Migrations
 {
-    public partial class DBContext : Migration
+    public partial class Tables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,19 +26,21 @@ namespace Diplomna.Migrations
                 name: "courses",
                 columns: table => new
                 {
-                    Courseid = table.Column<string>(type: "text", nullable: false),
+                    Courseid = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UserName = table.Column<string>(type: "text", nullable: false),
                     CoursName = table.Column<string>(type: "text", nullable: false),
-                    Description = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    Usersname = table.Column<string>(type: "text", nullable: true)
+                    Description = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_courses", x => x.Courseid);
                     table.ForeignKey(
-                        name: "FK_courses_users_Usersname",
-                        column: x => x.Usersname,
+                        name: "FK_courses_users_UserName",
+                        column: x => x.UserName,
                         principalTable: "users",
-                        principalColumn: "name");
+                        principalColumn: "name",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -69,17 +71,17 @@ namespace Diplomna.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     UnitName = table.Column<string>(type: "text", nullable: false),
                     test = table.Column<string>(type: "text", nullable: false),
-                    Courseid = table.Column<string>(type: "text", nullable: false),
-                    CoursesCourseid = table.Column<string>(type: "text", nullable: true)
+                    CourseId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_units", x => x.Unitid);
                     table.ForeignKey(
-                        name: "FK_units_courses_CoursesCourseid",
-                        column: x => x.CoursesCourseid,
+                        name: "FK_units_courses_CourseId",
+                        column: x => x.CourseId,
                         principalTable: "courses",
-                        principalColumn: "Courseid");
+                        principalColumn: "Courseid",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -91,23 +93,23 @@ namespace Diplomna.Migrations
                     Title = table.Column<string>(type: "text", nullable: false),
                     VideosCount = table.Column<int>(type: "integer", nullable: false),
                     VideoPath = table.Column<string>(type: "text", nullable: false),
-                    Unitid = table.Column<int>(type: "integer", nullable: false),
-                    UnitsUnitid = table.Column<int>(type: "integer", nullable: true)
+                    UnitsId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_videos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_videos_units_UnitsUnitid",
-                        column: x => x.UnitsUnitid,
+                        name: "FK_videos_units_UnitsId",
+                        column: x => x.UnitsId,
                         principalTable: "units",
-                        principalColumn: "Unitid");
+                        principalColumn: "Unitid",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 table: "users",
                 columns: new[] { "name", "email", "password" },
-                values: new object[] { "Admin", "admin@gmail.com", "$2a$11$GJTvjkBMgl1rk0twirjATeHBfvbwRHoiIdvgIxpqZoJnxKC07wn5K" });
+                values: new object[] { "Admin", "admin@gmail.com", "$2a$11$YqZWTAu6TgOq/MkkSZ55n.SA06AEPLjjYBiyjzLXFcC1E37I5tgKa" });
 
             migrationBuilder.InsertData(
                 table: "roles",
@@ -115,9 +117,9 @@ namespace Diplomna.Migrations
                 values: new object[] { 1, "admin", "Admin" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_courses_Usersname",
+                name: "IX_courses_UserName",
                 table: "courses",
-                column: "Usersname");
+                column: "UserName");
 
             migrationBuilder.CreateIndex(
                 name: "IX_roles_UsersName",
@@ -125,14 +127,14 @@ namespace Diplomna.Migrations
                 column: "UsersName");
 
             migrationBuilder.CreateIndex(
-                name: "IX_units_CoursesCourseid",
+                name: "IX_units_CourseId",
                 table: "units",
-                column: "CoursesCourseid");
+                column: "CourseId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_videos_UnitsUnitid",
+                name: "IX_videos_UnitsId",
                 table: "videos",
-                column: "UnitsUnitid");
+                column: "UnitsId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

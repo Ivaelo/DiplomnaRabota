@@ -15,9 +15,11 @@ namespace Diplomna.Entities
 
         [Required]
         public string test { get; set; }
-        public string Courseid { get; set; }
 
-        public ICollection<Videos> Videos { get; set; }
+        public int CourseId { get; set; }
+        public virtual Courses Course { get; set; }
+
+        public virtual ICollection<Videos> Videos { get; set; }
         public Units(string UnitName,string test) {
             this.UnitName = UnitName;
             this.test = test;

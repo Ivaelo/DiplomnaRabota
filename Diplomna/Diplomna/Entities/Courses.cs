@@ -7,16 +7,18 @@ namespace Diplomna.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public String Courseid { get; set; }
+        public int Courseid { get; set; }
 
-        [ForeignKey("Creator")]
+        public string UserName { get; set; }
+        public virtual Users User { get; set; }
 
         [Required]
         public String CoursName { get; set; }
         [Required]
         [MaxLength(200)]
         public String Description { get; set; }
-        public ICollection<Units> Units { get; set; }
+
+        public virtual ICollection<Units> Units { get; set; }
         public Courses(string CoursName) { 
             this.CoursName = CoursName;
         }

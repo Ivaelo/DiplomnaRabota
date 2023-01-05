@@ -17,7 +17,7 @@ namespace Diplomna.Entities
         
 
 
-        public ICollection<Courses> Corses { get; set; }
+        public virtual ICollection<Courses> Corses { get; set; }
         public ICollection<Roles> Roles { get; set; }
 
         public Users(String name) {

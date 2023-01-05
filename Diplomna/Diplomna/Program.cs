@@ -1,3 +1,4 @@
+using Amazon.S3;
 using Diplomna.DbContexts;
 using Diplomna.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -22,6 +23,8 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 }
     );
+builder.Services.AddDefaultAWSOptions(builder.Configuration.GetAWSOptions());
+builder.Services.AddAWSService<IAmazonS3>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 /*builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme ).AddCookie(o => 
 {

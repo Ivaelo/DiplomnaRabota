@@ -34,9 +34,9 @@ namespace Diplomna.Services
             if (BCrypt.Net.BCrypt.Verify(logInDto.password, a.password) == true)
             {
                 var role = _usersInfoContext.roles.Where(p => p.UsersName.Equals(a.name)).FirstOrDefault();
-                if (string.IsNullOrWhiteSpace(context.Session.GetString(SessionVariables.sessionUserId)))
+                if (string.IsNullOrWhiteSpace(context.Session.GetString(SessionVariables.sessionUserName)))
                 {
-                    context.Session.SetString(SessionVariables.sessionUserId, a.name);
+                    context.Session.SetString(SessionVariables.sessionUserName, a.name);
                     context.Session.SetString(SessionVariables.sessionUserRole, role.Role);
                 }
                
