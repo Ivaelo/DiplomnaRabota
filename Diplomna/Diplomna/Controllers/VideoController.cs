@@ -5,6 +5,7 @@ using Diplomna.Dto;
 using Diplomna.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Diplomna.Controllers
 {
@@ -29,7 +30,9 @@ namespace Diplomna.Controllers
                 //kakvo se ima predvid opens the request from the reead streem
                 InputStream = file.OpenReadStream()
             };
-            Videos videos = new Videos("Video1",1,request.Key);
+            Videos videos = new Videos("Video1", 1, request.FilePath) {
+                UnitsId = 1
+            };
             _usersInfoContext.videos.Add(videos);
             await _usersInfoContext.SaveChangesAsync();
             //kakvo tochno e metadatata v amazon s3
@@ -39,7 +42,7 @@ namespace Diplomna.Controllers
         //zashto ako ne e async ne mi dava  da vurna ok()
         [HttpPost("/CreateCourese")]
         public async Task<IActionResult> CreateCourese(CoursDto courseDto) {
-            if (HttpContext.Session.GetString(SessionVariables.sessionUserRole) != "superUser") {
+            if (HttpContext.Session.GetString(SessionVariables.sessionUserRole) != "SuperUser") {
                 return Unauthorized("You need to be supergotin");
             }
             var Course = new Courses(courseDto.CoursName)
@@ -47,7 +50,29 @@ namespace Diplomna.Controllers
                 Description = courseDto.Description,
                 UserName = HttpContext.Session.GetString(SessionVariables.sessionUserName),
             };
+            _usersInfoContext.courses.Add(Course);
+            await _usersInfoContext.SaveChangesAsync();
             return Ok();
+        }
+        [HttpPost("/AddUnit")]
+        public async Task<IActionResult> AddUnit(UnitDto unitDto) {
+            string userName = HttpContext.Session.GetString(SessionVariables.sessionUserName);
+            Console.Write(userName);
+            var doesCouresExist =  _usersInfoContext.courses.Where(task => (task.UserName.Equals( userName))&&(task.Courseid.Equals(unitDto.CourseId))).FirstOrDefault();
+            Console.WriteLine(doesCouresExist);
+            Console.WriteLine(doesCouresExist.ToString);
+            if (doesCouresExist != null)
+            {
+                var unit = new Units(unitDto.UnitName, unitDto.test)
+                {
+                    CourseId = unitDto.CourseId,
+
+                };
+                _usersInfoContext.units.Add(unit);
+                await _usersInfoContext.SaveChangesAsync();
+                return Ok();
+            }
+            return BadRequest("You are not a contributer to the coures");
         }
     }
 }

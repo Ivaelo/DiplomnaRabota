@@ -31,6 +31,9 @@ namespace Diplomna.Services
         {
             var context = _accessor.HttpContext;
             var a = _usersInfoContext.users.Where(p => (p.name.Equals(logInDto.name))).FirstOrDefault();
+            if (a == null) {
+                return false;
+            }
             if (BCrypt.Net.BCrypt.Verify(logInDto.password, a.password) == true)
             {
                 var role = _usersInfoContext.roles.Where(p => p.UsersName.Equals(a.name)).FirstOrDefault();
