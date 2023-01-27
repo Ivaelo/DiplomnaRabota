@@ -30,7 +30,7 @@ namespace Diplomna.Controllers
                 //kakvo se ima predvid opens the request from the reead streem
                 InputStream = file.OpenReadStream()
             };
-            Videos videos = new Videos("Video1", 1, request.FilePath) {
+            Videos videos = new Videos("Video1", 1, request.Key) {
                 UnitsId = 1
             };
             _usersInfoContext.videos.Add(videos);
