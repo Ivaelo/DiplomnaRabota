@@ -7,5 +7,7 @@
 
         public String Description { get; set; }
 
+        public IFormFile file { get; set; }
+
     }
 }

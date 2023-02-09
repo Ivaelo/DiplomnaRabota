@@ -2,6 +2,7 @@ using Amazon.S3;
 using Diplomna.DbContexts;
 using Diplomna.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.EntityFrameworkCore;
 
 var Origins = "_Origins";
@@ -32,11 +33,16 @@ builder.Services.AddCors(options =>
     options.AddPolicy(Origins,
                           policy =>
                           {
-                              policy.WithOrigins("http://localhost:3000")
+                              policy.WithOrigins("https://localhost:3000")
                                                   .AllowAnyHeader()
-                                                  .AllowAnyMethod();
+                                                  .AllowAnyMethod()
+                                                  .AllowCredentials();
+                                               
+
                           });
 });
+
+
 
 /*builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme ).AddCookie(o => 
 {
@@ -62,6 +68,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 app.UseRouting();

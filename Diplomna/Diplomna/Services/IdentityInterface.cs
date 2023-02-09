@@ -9,6 +9,7 @@ namespace Diplomna.Services
 
         public Task<bool> RegisterUser(RegisterDto registerDto);
         public  Task<bool> SetRole(String Role, String userId);
-        public Task<String> AproveSuperUser(String id,Boolean isAproved);
+
+        public Task<String> AproveSuperUser(String id,Boolean isAproved,int roleId);
     } 
 }

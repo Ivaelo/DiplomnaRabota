@@ -26,7 +26,16 @@ namespace Diplomna.Services
            // await _usersInfoContext.SaveChangesAsync();
             return true;
         }
-        
+        public async Task<bool> UpdateRole(String Role, String userName,int RoleId)
+        {
+            Roles roles = new Roles(Role, userName) {
+                Id = RoleId,
+            };
+            _usersInfoContext.roles.Update(roles);
+            await _usersInfoContext.SaveChangesAsync();
+            return true;
+        }
+
         public async Task<bool> LogIn(LogInDto logInDto)
         {
             var context = _accessor.HttpContext;
@@ -48,6 +57,7 @@ namespace Diplomna.Services
             {
                 throw new Exception("user not found");
             }
+            
             return true;
         }
 
@@ -68,12 +78,12 @@ namespace Diplomna.Services
             return true;
         }
 
-        public async Task<String> AproveSuperUser(string name, bool isAproved)
+        public async Task<String> AproveSuperUser(string name, bool isAproved, int roleId)
         {
             if (isAproved == true)
             {
-                SetRole("SuperUser", name);
-                await _usersInfoContext.SaveChangesAsync();
+                UpdateRole("SuperUser", name, roleId);
+
                 
                 return "aproved";
             }
@@ -81,5 +91,7 @@ namespace Diplomna.Services
             throw new Exception("User is not validated");
             
         }
+
+
     }
 }

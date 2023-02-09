@@ -24,6 +24,7 @@ namespace Diplomna.Controllers
         {
 
            if (await _identityService.LogIn(logInDto) == true) {
+
                 return Ok(HttpContext.Session.GetString(SessionVariables.sessionUserRole));
             }
 

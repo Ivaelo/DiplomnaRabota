@@ -10,8 +10,9 @@ namespace Diplomna.Entities
         public int Courseid { get; set; }
 
         public string UserName { get; set; }
+        public String Picture { get; set; }
         public virtual Users User { get; set; }
-
+        
         [Required]
         public String CoursName { get; set; }
         [Required]

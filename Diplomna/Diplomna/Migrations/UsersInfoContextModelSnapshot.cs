@@ -38,6 +38,10 @@ namespace Diplomna.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("character varying(200)");
 
+                    b.Property<string>("Picture")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("text");
@@ -47,6 +51,40 @@ namespace Diplomna.Migrations
                     b.HasIndex("UserName");
 
                     b.ToTable("courses");
+                });
+
+            modelBuilder.Entity("Diplomna.Entities.Questions", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("A")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("B")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("C")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RightAnser")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("TestsId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TestsId");
+
+                    b.ToTable("questions");
                 });
 
             modelBuilder.Entity("Diplomna.Entities.Roles", b =>
@@ -80,6 +118,27 @@ namespace Diplomna.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Diplomna.Entities.Tests", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<float>("Score")
+                        .HasColumnType("real");
+
+                    b.Property<int>("UnitsId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UnitsId");
+
+                    b.ToTable("tests");
+                });
+
             modelBuilder.Entity("Diplomna.Entities.Units", b =>
                 {
                     b.Property<int>("Unitid")
@@ -88,7 +147,7 @@ namespace Diplomna.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Unitid"));
 
-                    b.Property<int>("CourseId")
+                    b.Property<int>("CoursesId")
                         .HasColumnType("integer");
 
                     b.Property<string>("UnitName")
@@ -101,7 +160,7 @@ namespace Diplomna.Migrations
 
                     b.HasKey("Unitid");
 
-                    b.HasIndex("CourseId");
+                    b.HasIndex("CoursesId");
 
                     b.ToTable("units");
                 });
@@ -128,7 +187,7 @@ namespace Diplomna.Migrations
                         {
                             name = "Admin",
                             email = "admin@gmail.com",
-                            password = "$2a$11$YqZWTAu6TgOq/MkkSZ55n.SA06AEPLjjYBiyjzLXFcC1E37I5tgKa"
+                            password = "$2a$11$s7ZUNSNpKFbTg1zCYQUl4O1MJS6Z8NJeGVj0hoK1FwQq5EQlNXfMS"
                         });
                 });
 
@@ -151,9 +210,6 @@ namespace Diplomna.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("VideosCount")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
                     b.HasIndex("UnitsId");
@@ -172,6 +228,17 @@ namespace Diplomna.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Diplomna.Entities.Questions", b =>
+                {
+                    b.HasOne("Diplomna.Entities.Tests", "Tests")
+                        .WithMany("Questions")
+                        .HasForeignKey("TestsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tests");
+                });
+
             modelBuilder.Entity("Diplomna.Entities.Roles", b =>
                 {
                     b.HasOne("Diplomna.Entities.Users", null)
@@ -181,11 +248,22 @@ namespace Diplomna.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Diplomna.Entities.Tests", b =>
+                {
+                    b.HasOne("Diplomna.Entities.Units", "Units")
+                        .WithMany("Tests")
+                        .HasForeignKey("UnitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Units");
+                });
+
             modelBuilder.Entity("Diplomna.Entities.Units", b =>
                 {
                     b.HasOne("Diplomna.Entities.Courses", "Course")
                         .WithMany("Units")
-                        .HasForeignKey("CourseId")
+                        .HasForeignKey("CoursesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -208,8 +286,15 @@ namespace Diplomna.Migrations
                     b.Navigation("Units");
                 });
 
+            modelBuilder.Entity("Diplomna.Entities.Tests", b =>
+                {
+                    b.Navigation("Questions");
+                });
+
             modelBuilder.Entity("Diplomna.Entities.Units", b =>
                 {
+                    b.Navigation("Tests");
+
                     b.Navigation("Videos");
                 });
 

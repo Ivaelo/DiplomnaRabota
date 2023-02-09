@@ -35,11 +35,13 @@ namespace Diplomna.Controllers
         [HttpPost("/superUser")]
         public async Task<IActionResult> RegisterSuperUser(RegisterDto registerDto) {
             await _identityService.RegisterUser(registerDto);
+            _identityService.SetRole("NotAccepted", registerDto.name);
+            await _usersInfoContext.SaveChangesAsync();
             return Ok("Your account is weating for aproval");
         }
         [HttpPost("/aproveSuperUser")]
-        public async Task<IActionResult> AproveSuperUser(String id,bool isAproved) {
-           var mesage =  await _identityService.AproveSuperUser(id,isAproved);
+        public async Task<IActionResult> AproveSuperUser(RoleDto roleDto) {
+            var mesage = await _identityService.AproveSuperUser(roleDto.Name,roleDto.isAproved,roleDto.Id);
             return Ok(mesage);
         }
     }

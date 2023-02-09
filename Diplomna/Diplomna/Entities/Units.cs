@@ -13,13 +13,13 @@ namespace Diplomna.Entities
         [Required]
         public string UnitName { get; set; }
 
-        [Required]
         public string test { get; set; }
 
-        public int CourseId { get; set; }
+        public int CoursesId { get; set; }
         public virtual Courses Course { get; set; }
 
         public virtual ICollection<Videos> Videos { get; set; }
+        public virtual ICollection<Tests> Tests { get; set; }
         public Units(string UnitName,string test) {
             this.UnitName = UnitName;
             this.test = test;

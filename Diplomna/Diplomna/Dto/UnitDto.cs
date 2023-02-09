@@ -6,7 +6,7 @@ namespace Diplomna.Dto
     {
         public int Unitid { get; set; }
         public string UnitName { get; set; }
-        public string test { get; set; }
+        public string? test { get; set; }
 
         public int CourseId { get; set; }
     }

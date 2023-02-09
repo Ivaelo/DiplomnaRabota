@@ -10,6 +10,8 @@ namespace Diplomna.DbContexts
         public DbSet<Videos> videos { get; set; } = null!;
         public DbSet<Roles> roles { get; set; } = null!;
         public DbSet<Units> units { get; set; } = null!;
+        public DbSet<Tests> tests { get; set; } = null!;
+        public DbSet<Questions> questions { get; set; } = null!;
 
         public UsersInfoContext(DbContextOptions<UsersInfoContext> option) : base(option)
         { }

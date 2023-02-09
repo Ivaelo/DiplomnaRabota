@@ -8,16 +8,15 @@ namespace Diplomna.Entities
         public int Id { get; set; }
 
         public String Title { get; set; }
-        public int VideosCount { get; set; }
+
         public String VideoPath { get; set; }
         public int UnitsId { get; set; }
         public virtual Units Units { get; set; }
-        public Videos( string title, int videosCount, string videoPath)
+        public Videos( string title, string videoPath)
         {
 
             Title = title;
 
-            VideosCount = videosCount;
             VideoPath = videoPath;
 
 
