@@ -28,10 +28,9 @@ namespace Diplomna.Services
         }
         public async Task<bool> UpdateRole(String Role, String userName,int RoleId)
         {
-            Roles roles = new Roles(Role, userName) {
-                Id = RoleId,
-            };
-            _usersInfoContext.roles.Update(roles);
+            var role = _usersInfoContext.roles.Where(r => r.Id.Equals(RoleId)).FirstOrDefault();
+            role.Role = "SuperUser";
+            _usersInfoContext.roles.Update(role);
             await _usersInfoContext.SaveChangesAsync();
             return true;
         }

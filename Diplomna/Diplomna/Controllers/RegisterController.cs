@@ -39,7 +39,7 @@ namespace Diplomna.Controllers
             await _usersInfoContext.SaveChangesAsync();
             return Ok("Your account is weating for aproval");
         }
-        [HttpPost("/aproveSuperUser")]
+        [HttpPut("/aproveSuperUser")]
         public async Task<IActionResult> AproveSuperUser(RoleDto roleDto) {
             var mesage = await _identityService.AproveSuperUser(roleDto.Name,roleDto.isAproved,roleDto.Id);
             return Ok(mesage);
