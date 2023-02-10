@@ -93,5 +93,17 @@ namespace Diplomna.Controllers
             }
             return BadRequest("You are not a contributer to the coures");
         }
+        [HttpDelete("DeletVideo")]
+        public async Task<IActionResult> DeleteVideo(DeleteVideoDto videoDto)
+        {
+            var bucketExists = await _s3Client.DoesS3BucketExistAsync(bucketName);
+            if (!bucketExists) return NotFound($"Bucket {bucketName} does not exist");
+            await _s3Client.DeleteObjectAsync(bucketName, videoDto.path);
+            var videos = _usersInfoContext.videos.Find(videoDto.Id);
+            _usersInfoContext.videos.Remove(videos);
+            _usersInfoContext.SaveChanges();
+
+            return Ok();
+        }
     }
 }

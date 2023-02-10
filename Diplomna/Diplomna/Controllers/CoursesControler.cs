@@ -38,6 +38,12 @@ namespace Diplomna.Controllers
             var a = _usersInfoContext.courses.Where(c=>c.CoursName.Equals(coursName)).ToList();
             return Ok(a);
         }
+        [HttpGet("Videos")]
+        public async Task<IActionResult> GetVideos(int unidtId)
+        {
+            var a = _usersInfoContext.videos.Where(v => v.UnitsId == unidtId).ToList();
+            return Ok(a);
+        }
 
     }
 }
