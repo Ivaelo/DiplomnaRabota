@@ -16,7 +16,7 @@ namespace Diplomna.Controllers
         public SubscribeController(UsersInfoContext usersInfoContext)
         {
 
-            _usersInfoContext = usersInfoContext;
+            _usersInfoContext = usersInfoContext; 
           
         }
         [HttpPost]
