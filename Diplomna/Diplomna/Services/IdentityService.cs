@@ -28,7 +28,7 @@ namespace Diplomna.Services
         }
         public async Task<bool> UpdateRole(String Role, String userName,int RoleId)
         {
-            var role = _usersInfoContext.roles.Where(r => r.Id.Equals(RoleId)).FirstOrDefault();
+            var role = _usersInfoContext.roles.Find(RoleId);
             role.Role = "SuperUser";
             _usersInfoContext.roles.Update(role);
             await _usersInfoContext.SaveChangesAsync();
@@ -45,12 +45,12 @@ namespace Diplomna.Services
             if (BCrypt.Net.BCrypt.Verify(logInDto.password, a.password) == true)
             {
                 var role = _usersInfoContext.roles.Where(p => p.UsersName.Equals(a.name)).FirstOrDefault();
-                if (string.IsNullOrWhiteSpace(context.Session.GetString(SessionVariables.sessionUserName)))
-                {
-                    context.Session.SetString(SessionVariables.sessionUserName, a.name);
-                    context.Session.SetString(SessionVariables.sessionUserRole, role.Role);
-                }
-               
+                Console.WriteLine(role.UsersName);
+
+                context.Session.SetString(a.name,role.Role);
+                
+ 
+                
             }
             else
             {

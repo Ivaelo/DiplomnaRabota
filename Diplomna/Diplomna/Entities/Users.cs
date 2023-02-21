@@ -20,6 +20,10 @@ namespace Diplomna.Entities
 
         public virtual ICollection<Courses> Corses { get; set; }
         public ICollection<Roles> Roles { get; set; }
+        public virtual ICollection<MyCourses> MyCorses { get; set; }
+        public virtual ICollection<MyTests> MyTests { get; set; }
+        public virtual ICollection<Certificates> Certificats { get; set; }
+        public virtual ICollection<FavouriteCourses> FavouriteCorses { get; set; }
 
         public Users(String name) {
 

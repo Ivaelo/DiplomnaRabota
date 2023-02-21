@@ -1,8 +1,7 @@
 ﻿namespace Diplomna
 {
-    public class SessionVariables
+    public class sessionVariables
     {
-        public const string sessionUserName = "1";
-        public const string sessionUserRole = "0";
+        
     }
 }

@@ -27,7 +27,7 @@ namespace Diplomna.Controllers
             if (await _identityService.LogIn(logInDto) == true)
             {
 
-                return Ok(HttpContext.Session.GetString(SessionVariables.sessionUserRole));
+                return Ok(HttpContext.Session.GetString(logInDto.name));
             }
 
             throw new Exception("User not found");

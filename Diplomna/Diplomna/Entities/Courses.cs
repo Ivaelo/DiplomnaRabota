@@ -20,6 +20,7 @@ namespace Diplomna.Entities
         public String Description { get; set; }
 
         public virtual ICollection<Units> Units { get; set; }
+        public virtual ICollection<CoursCertificates> CoursCertificats { get; set; }
         public Courses(string CoursName) { 
             this.CoursName = CoursName;
         }

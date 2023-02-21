@@ -21,6 +21,62 @@ namespace Diplomna.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Diplomna.Entities.Certificates", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("coursId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserName");
+
+                    b.ToTable("Certificats");
+                });
+
+            modelBuilder.Entity("Diplomna.Entities.CoursCertificates", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CoursesId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CoursesId");
+
+                    b.ToTable("CoursCertificats");
+                });
+
             modelBuilder.Entity("Diplomna.Entities.Courses", b =>
                 {
                     b.Property<int>("Courseid")
@@ -53,6 +109,81 @@ namespace Diplomna.Migrations
                     b.ToTable("courses");
                 });
 
+            modelBuilder.Entity("Diplomna.Entities.FavouriteCourses", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CoursesId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserName");
+
+                    b.ToTable("favCourses");
+                });
+
+            modelBuilder.Entity("Diplomna.Entities.MyCourses", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("coursId")
+                        .HasColumnType("integer");
+
+                    b.Property<float>("progres")
+                        .HasColumnType("real");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserName");
+
+                    b.ToTable("MyCourses");
+                });
+
+            modelBuilder.Entity("Diplomna.Entities.MyTests", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<float>("Score")
+                        .HasColumnType("real");
+
+                    b.Property<int>("TestId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("coursId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserName");
+
+                    b.ToTable("MyTests");
+                });
+
             modelBuilder.Entity("Diplomna.Entities.Questions", b =>
                 {
                     b.Property<int>("Id")
@@ -79,6 +210,10 @@ namespace Diplomna.Migrations
 
                     b.Property<int>("TestsId")
                         .HasColumnType("integer");
+
+                    b.Property<string>("question")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -126,8 +261,9 @@ namespace Diplomna.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<float>("Score")
-                        .HasColumnType("real");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("UnitsId")
                         .HasColumnType("integer");
@@ -151,10 +287,6 @@ namespace Diplomna.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("UnitName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("test")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -187,7 +319,7 @@ namespace Diplomna.Migrations
                         {
                             name = "Admin",
                             email = "admin@gmail.com",
-                            password = "$2a$11$s7ZUNSNpKFbTg1zCYQUl4O1MJS6Z8NJeGVj0hoK1FwQq5EQlNXfMS"
+                            password = "$2a$11$pOFJ0v11ptwxgKJJNNsF1.I.5LkGU0BGHqCOMyLkynHbDLcyktfUa"
                         });
                 });
 
@@ -217,10 +349,65 @@ namespace Diplomna.Migrations
                     b.ToTable("videos");
                 });
 
+            modelBuilder.Entity("Diplomna.Entities.Certificates", b =>
+                {
+                    b.HasOne("Diplomna.Entities.Users", "User")
+                        .WithMany("Certificats")
+                        .HasForeignKey("UserName")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Diplomna.Entities.CoursCertificates", b =>
+                {
+                    b.HasOne("Diplomna.Entities.Courses", "Course")
+                        .WithMany("CoursCertificats")
+                        .HasForeignKey("CoursesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+                });
+
             modelBuilder.Entity("Diplomna.Entities.Courses", b =>
                 {
                     b.HasOne("Diplomna.Entities.Users", "User")
                         .WithMany("Corses")
+                        .HasForeignKey("UserName")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Diplomna.Entities.FavouriteCourses", b =>
+                {
+                    b.HasOne("Diplomna.Entities.Users", "User")
+                        .WithMany("FavouriteCorses")
+                        .HasForeignKey("UserName")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Diplomna.Entities.MyCourses", b =>
+                {
+                    b.HasOne("Diplomna.Entities.Users", "User")
+                        .WithMany("MyCorses")
+                        .HasForeignKey("UserName")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Diplomna.Entities.MyTests", b =>
+                {
+                    b.HasOne("Diplomna.Entities.Users", "User")
+                        .WithMany("MyTests")
                         .HasForeignKey("UserName")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -283,6 +470,8 @@ namespace Diplomna.Migrations
 
             modelBuilder.Entity("Diplomna.Entities.Courses", b =>
                 {
+                    b.Navigation("CoursCertificats");
+
                     b.Navigation("Units");
                 });
 
@@ -300,7 +489,15 @@ namespace Diplomna.Migrations
 
             modelBuilder.Entity("Diplomna.Entities.Users", b =>
                 {
+                    b.Navigation("Certificats");
+
                     b.Navigation("Corses");
+
+                    b.Navigation("FavouriteCorses");
+
+                    b.Navigation("MyCorses");
+
+                    b.Navigation("MyTests");
 
                     b.Navigation("Roles");
                 });

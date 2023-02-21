@@ -9,7 +9,7 @@ namespace Diplomna.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public float Score { get; set; }
+        public string Name { get; set; }
         public int UnitsId { get; set; }
         public virtual Units Units { get; set; }
 

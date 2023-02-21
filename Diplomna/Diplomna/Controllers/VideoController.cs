@@ -48,7 +48,7 @@ namespace Diplomna.Controllers
         //zashto ako ne e async ne mi dava  da vurna ok()
         [HttpPost("/CreateCourese")]
         public async Task<IActionResult> CreateCourese([FromForm]CoursDto courseDto) {
-            if (HttpContext.Session.GetString(SessionVariables.sessionUserRole) != "SuperUser") {
+            if (HttpContext.Session.GetString(courseDto.userName) != "SuperUser") {
                 return Unauthorized("You need to be supergotin");
             }
             String prefix = null;
@@ -66,7 +66,7 @@ namespace Diplomna.Controllers
             var Course = new Courses(courseDto.CoursName)
             {
                 Description = courseDto.Description,
-                UserName = HttpContext.Session.GetString(SessionVariables.sessionUserName),
+                UserName = courseDto.userName,
                 Picture = request.Key,
             };
             _usersInfoContext.courses.Add(Course);
@@ -76,13 +76,12 @@ namespace Diplomna.Controllers
         }
         [HttpPost("/AddUnit")]
         public async Task<IActionResult> AddUnit(UnitDto unitDto) {
-            string userName = HttpContext.Session.GetString(SessionVariables.sessionUserName);
-            Console.Write(userName);
-            var doesCouresExist =  _usersInfoContext.courses.Where(task => (task.UserName.Equals( userName))&&(task.Courseid.Equals(unitDto.CourseId))).FirstOrDefault();
+
+            var doesCouresExist =  _usersInfoContext.courses.Where(task => (task.UserName.Equals( unitDto.userName))&&(task.Courseid.Equals(unitDto.CourseId))).FirstOrDefault();
 
             if (doesCouresExist != null)
             {
-                var unit = new Units(unitDto.UnitName, unitDto.test)
+                var unit = new Units(unitDto.UnitName)
                 {
                     CoursesId = unitDto.CourseId,
 

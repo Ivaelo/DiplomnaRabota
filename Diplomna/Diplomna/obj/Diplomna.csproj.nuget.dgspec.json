@@ -88,6 +88,10 @@
               "target": "Package",
               "version": "[108.0.3, )"
             },
+            "ServiceStack.Interfaces": {
+              "target": "Package",
+              "version": "[6.6.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -111,7 +115,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.308\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.309\\RuntimeIdentifierGraph.json"
         }
       }
     }

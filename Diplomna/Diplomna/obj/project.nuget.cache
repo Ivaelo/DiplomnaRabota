@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HMlvGYhz/m8wevkMD0aljvgP0v6ZPPsa/FiohYD7qhAY+l83MdbgXLKNl7mhDo5wd/R8NzZnR0r9YP9dJl6R6A==",
+  "dgSpecHash": "tpNOCAH9fAFH2qF6okrw9V3Zktd33SiJTFx4i2CeT9UuzMK/zbT3l/UTVvhurw8iD4MnWWHh8PocEC75SebPnQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\bakar\\OneDrive\\Documents\\GitHub\\DiplomnaRabota\\Diplomna\\Diplomna\\Diplomna.csproj",
   "expectedPackageFiles": [
@@ -45,6 +45,7 @@
     "C:\\Users\\bakar\\.nuget\\packages\\npgsql\\6.0.0\\npgsql.6.0.0.nupkg.sha512",
     "C:\\Users\\bakar\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.0\\npgsql.entityframeworkcore.postgresql.6.0.0.nupkg.sha512",
     "C:\\Users\\bakar\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512",
+    "C:\\Users\\bakar\\.nuget\\packages\\servicestack.interfaces\\6.6.0\\servicestack.interfaces.6.6.0.nupkg.sha512",
     "C:\\Users\\bakar\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\bakar\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\bakar\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

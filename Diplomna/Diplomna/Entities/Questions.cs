@@ -11,6 +11,8 @@ namespace Diplomna.Entities
         [Required]
         public string RightAnser { get; set; }
 
+        public string question { get; set; }
+
         [Required]
         public string A { get; set; }
         [Required]

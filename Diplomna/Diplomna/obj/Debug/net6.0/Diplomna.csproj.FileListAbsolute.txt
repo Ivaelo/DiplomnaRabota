@@ -121,3 +121,4 @@ C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\De
 C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AWSSDK.Core.dll
 C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AWSSDK.Extensions.NETCore.Setup.dll
 C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AWSSDK.S3.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\ServiceStack.Interfaces.dll

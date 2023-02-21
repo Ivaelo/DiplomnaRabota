@@ -12,6 +12,11 @@ namespace Diplomna.DbContexts
         public DbSet<Units> units { get; set; } = null!;
         public DbSet<Tests> tests { get; set; } = null!;
         public DbSet<Questions> questions { get; set; } = null!;
+        public DbSet<MyTests> MyTests { get; set; } = null!;
+        public DbSet<MyCourses> MyCourses { get; set; } = null!;
+        public DbSet<Certificates> Certificats { get; set; } = null!;
+        public DbSet<CoursCertificates> CoursCertificats { get; set; } = null!;
+        public DbSet<FavouriteCourses> favCourses { get; set; } = null!;
 
         public UsersInfoContext(DbContextOptions<UsersInfoContext> option) : base(option)
         { }
