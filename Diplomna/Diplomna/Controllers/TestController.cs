@@ -60,9 +60,14 @@ namespace Diplomna.Controllers
             List<string> RightAnsers = new List<string>();
             List<string> CorectAnsers = new List<string>();
             Test.ForEach(q =>  RightAnsers.Add(q.RightAnser));
+            Console.WriteLine(RightAnsers.Count);
             for (int i = 0; i < RightAnsers.Count; i++) {
+                Console.WriteLine(RightAnsers.Count);
                 if (solvTestDto.ansers[i].Equals(RightAnsers[i]) ) { CorectAnsers.Add(solvTestDto.ansers[i]); }
+                Console.WriteLine(CorectAnsers.Count);
             }
+            Console.WriteLine(CorectAnsers.Count);
+            Console.WriteLine(RightAnsers.Count);
             var procentige = (CorectAnsers.Count / RightAnsers.Count) * 100;
             if (procentige >= 50) {
                 MyTests myTests = new MyTests()
@@ -83,26 +88,30 @@ namespace Diplomna.Controllers
         [HttpPost("myCourses")]
         public async Task<IActionResult> MyCourses(TestScourDto testScourDto) {
             var coursExist = _usersInfoContext.MyCourses.Where(x => (x.coursId == testScourDto.coursId) &&(x.UserName.Equals(testScourDto.UserName))).FirstOrDefault();
-            if (coursExist != null) Ok("This Cours awredy exists");
-            MyCourses course = new MyCourses() {
-                coursId= testScourDto.coursId,
-                UserName= testScourDto.UserName,
-                progres = 0
+            if (coursExist != null) { return Ok("This Cours awredy exists"); }
+            else { 
+                MyCourses course = new MyCourses() {
+                    coursId= testScourDto.coursId,
+                    UserName= testScourDto.UserName,
+                    progres = 0
                 
-            };
-            _usersInfoContext.MyCourses.Add(course);
-            await _usersInfoContext.SaveChangesAsync();
+                };
+                _usersInfoContext.MyCourses.Add(course);
+                await _usersInfoContext.SaveChangesAsync();
+            }
             return Ok();
         }
         [HttpPut("score")]
         public async Task<IActionResult> UpdateProgres(TestScourDto testScourDto) {
             var myCours = _usersInfoContext.MyCourses.Where(x => (x.coursId == testScourDto.coursId) && (x.UserName.Equals(testScourDto.UserName))).FirstOrDefault();
-            var Tests = _usersInfoContext.MyTests.Where(x=> (x.coursId == testScourDto.coursId)&&(x.UserName.Equals(testScourDto.UserName))).Count();
-            var AllTests = _usersInfoContext.units.Where(x => x.CoursesId.Equals(testScourDto.coursId)).Count();
+            var Tests = _usersInfoContext.MyTests.Where(x=> (x.coursId == testScourDto.coursId)&&(x.UserName.Equals(testScourDto.UserName))).ToList();
+            var AllTests = _usersInfoContext.units.Where(x => x.CoursesId.Equals(testScourDto.coursId)).ToList();
             if (myCours != null) {
-                myCours.progres = myCours.progres + ((Tests/AllTests)*100);
+                Console.WriteLine("vlez v cikala");
+                myCours.progres = (float)Tests.Count / AllTests.Count*100;
+                Console.WriteLine((double)Tests.Count / AllTests.Count * 100) ;
                 _usersInfoContext.MyCourses.Update(myCours);
-                _usersInfoContext.SaveChanges();
+                await _usersInfoContext.SaveChangesAsync();
             }
 
             return Ok();

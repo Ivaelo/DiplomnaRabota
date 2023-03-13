@@ -35,7 +35,7 @@ namespace Diplomna.Controllers
         [HttpGet("SurchCours")]
         public async Task<IActionResult> SurchCourser(String coursName)
         {
-            var a = _usersInfoContext.courses.Where(c=>c.CoursName.Equals(coursName)).ToList();
+            var a = _usersInfoContext.courses.Where(c=>c.CoursName.Contains(coursName)).ToList();
             return Ok(a);
         }
         [HttpGet("Videos")]

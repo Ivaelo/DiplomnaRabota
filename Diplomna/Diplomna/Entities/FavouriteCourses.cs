@@ -9,6 +9,7 @@ namespace Diplomna.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int CoursesId { get; set; }
+        public string Name { get; set; }
         public string UserName { get; set; }
         public virtual Users User { get; set; }
     }

@@ -26,12 +26,15 @@ namespace Diplomna.Controllers
             {
                 return BadRequest("you are not autorized");
             }
+            var coursName = _usersInfoContext.courses.Find(subscribeDto.coursId);
             if (sub == null)
             {
                 FavouriteCourses favC = new FavouriteCourses()
                 {
                     UserName = subscribeDto.name,
-                    CoursesId = subscribeDto.coursId
+                    CoursesId = subscribeDto.coursId,
+                    Name = coursName.CoursName,
+
                 };
                 _usersInfoContext.favCourses.Add(favC);
                 await _usersInfoContext.SaveChangesAsync();
@@ -40,6 +43,11 @@ namespace Diplomna.Controllers
             else {
                 return BadRequest("You are alredy subscribed");
             }
+        }
+        [HttpGet("/GetSub")]
+        public async Task<IActionResult> getSubedCourses(string userName) {
+            var subed = _usersInfoContext.favCourses.Where(x => x.UserName.Equals(userName)).ToList();
+            return Ok(subed);
         }
     }
 }

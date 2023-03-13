@@ -120,6 +120,10 @@ namespace Diplomna.Migrations
                     b.Property<int>("CoursesId")
                         .HasColumnType("integer");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("text");
@@ -319,7 +323,7 @@ namespace Diplomna.Migrations
                         {
                             name = "Admin",
                             email = "admin@gmail.com",
-                            password = "$2a$11$pOFJ0v11ptwxgKJJNNsF1.I.5LkGU0BGHqCOMyLkynHbDLcyktfUa"
+                            password = "$2a$11$RNDJvDwKOaxyqG.0BV2dcenP9Fx5.o6PQtEZTHBfeJbo2ipYRr0V2"
                         });
                 });
 
