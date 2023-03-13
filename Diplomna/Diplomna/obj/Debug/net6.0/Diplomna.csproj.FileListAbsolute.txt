@@ -1,0 +1,124 @@
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\appsettings.json
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.exe
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.deps.json
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.runtimeconfig.json
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.pdb
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Humanizer.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Npgsql.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.csproj.AssemblyReference.cache
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.AssemblyInfoInputs.cache
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.AssemblyInfo.cs
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.csproj.CoreCompileInputs.cache
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\scopedcss\bundle\Diplomna.styles.css
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.csproj.CopyComplete
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\refint\Diplomna.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.pdb
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.genruntimeconfig.cache
+C:\Users\bakar\source\repos\Diplomna\Diplomna\obj\Debug\net6.0\ref\Diplomna.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\bakar\source\repos\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.Web.Mvc.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\appsettings.json
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.exe
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.deps.json
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.runtimeconfig.json
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.pdb
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.Web.Mvc.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Npgsql.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.csproj.AssemblyReference.cache
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.AssemblyInfoInputs.cache
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.AssemblyInfo.cs
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.csproj.CoreCompileInputs.cache
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\scopedcss\bundle\Diplomna.styles.css
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.csproj.CopyComplete
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\refint\Diplomna.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.pdb
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.genruntimeconfig.cache
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\ref\Diplomna.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\RestSharp.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\appsettings.json
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.exe
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.deps.json
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.runtimeconfig.json
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Diplomna.pdb
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AWSSDK.Extensions.NETCore.Setup.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AWSSDK.S3.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Humanizer.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Microsoft.Web.Mvc.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Npgsql.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\RestSharp.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.csproj.AssemblyReference.cache
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.AssemblyInfoInputs.cache
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.AssemblyInfo.cs
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.csproj.CoreCompileInputs.cache
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\scopedcss\bundle\Diplomna.styles.css
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.csproj.CopyComplete
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\refint\Diplomna.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.pdb
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\Diplomna.genruntimeconfig.cache
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\obj\Debug\net6.0\ref\Diplomna.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AWSSDK.Extensions.NETCore.Setup.dll
+C:\Users\Ivaelo Krastev\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\AWSSDK.S3.dll
+C:\Users\bakar\OneDrive\Documents\GitHub\DiplomnaRabota\Diplomna\Diplomna\bin\Debug\net6.0\ServiceStack.Interfaces.dll
