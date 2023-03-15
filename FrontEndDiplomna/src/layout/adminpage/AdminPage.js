@@ -3,6 +3,7 @@ import React, {  useEffect,useState } from "react"
 import axios from 'axios';
 import Admin from './Admin.module.css'
 import { useCookies } from "react-cookie";
+import { Button } from "react-bootstrap";
 
 function AdminPage(){
     const [users, setUsers] = useState([]);
@@ -11,7 +12,6 @@ function AdminPage(){
     axios.defaults.withCredentials = true;
     const fetchData = () => {
         axios.get(`https://localhost:7021/api/AdminPageControler` ).then(response => {
-    
           setUsers(response.data)
         })
     }
@@ -20,15 +20,13 @@ function AdminPage(){
             id: id,
             name: name,
             isAproved: true
-        } ).then(response => {
+        } ).then(() => {
             setAprove(aprove+1)
         })
     }
     useEffect(() => {
-        fetchData()
-      }, [])
-    useEffect(() => {
-        fetchData()
+        console.log(" HERE ds")
+        fetchData();
       }, [aprove])
     return (
         
@@ -49,7 +47,7 @@ function AdminPage(){
                             <tr key={user.id}>
                                 <td>{user.usersName}</td>
                                 <td>{user.role}</td>
-                                <td><button onClick={()=>AproveUser(user.id,user.usersName)}>approve</button></td>
+                                <td><Button onClick={()=>AproveUser(user.id,user.usersName)}>approve</Button></td>
                             </tr>
                         ))
                    ) }

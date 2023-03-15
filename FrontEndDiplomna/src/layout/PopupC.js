@@ -73,7 +73,7 @@ function PopupC(props) {
               </Button>
             </Form> </Modal.Body>
           <Modal.Footer>
-              <Button onClick={props.onHide}>Close</Button>
+              <Button onClick={()=>{props.onHide();window.location.reload();}}>Close</Button>
           </Modal.Footer>
           </Modal>
 

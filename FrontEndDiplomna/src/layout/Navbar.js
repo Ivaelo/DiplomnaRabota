@@ -146,7 +146,7 @@ function NavBar(){
                        <Card.Text>
                          {surch.description}
                        </Card.Text>
-                       <Button variant="primary" onClick={()=>navigate(`/WachVideo/${surch.courseid}`)} >Go to cours</Button>
+                       <Button variant="primary" onClick={()=>{navigate(`/WachVideo/${surch.courseid}`);window.location.reload();}} >Go to cours</Button>
                      </Card.Body>
                    </Card></div>
                  ))}
